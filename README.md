@@ -17,7 +17,7 @@ This is a Spring Boot backend service designed to interact with the [Meta WhatsA
 
 ## 🛠️ Tech Stack
 
-- Java 17
+- Java 21
 - Spring Boot 3.x
 - Firebase Admin SDK
 - WhatsApp Cloud API (v16.0)
@@ -56,23 +56,6 @@ src/
 5. Place it in: `src/main/resources/`
 
 ---
-
-## ⚙️ Configuration
-
-### 🧾 `application.properties`
-
-```properties
-# Server port
-server.port=8080
-
-# WhatsApp Cloud API
-whatsapp.api.base-url=https://graph.facebook.com/v16.0/
-whatsapp.api.phone-number-id=YOUR_PHONE_NUMBER_ID
-whatsapp.api.token=YOUR_WHATSAPP_ACCESS_TOKEN
-
-# Firebase Admin SDK
-firebase.service-account-key-path=classpath:serviceAccountKey.json
-
 | Method | Endpoint   | Description                 |
 | ------ | ---------- | --------------------------- |
 | GET    | `/webhook` | Webhook verification (Meta) |
@@ -90,7 +73,27 @@ Required: Add a serviceAccountKey.json at runtime (Render Secret Storage or moun
 👨‍💻 Author
 Made with ❤️ by Yash Pande
 
-🛡️ License
+
+
+## ⚙️ Configuration
+
+### 🧾 `application.properties`
+
+
+# Server port
+server.port=8080
+
+# WhatsApp Cloud API
+whatsapp.api.base-url=https://graph.facebook.com/v16.0/
+whatsapp.api.phone-number-id=YOUR_PHONE_NUMBER_ID
+whatsapp.api.token=YOUR_WHATSAPP_ACCESS_TOKEN
+
+# Firebase Admin SDK
+firebase.service-account-key-path=classpath:serviceAccountKey.json
+
+
+
+-🛡️ License
 This project is open-source and free to use under the MIT License.
 
 
